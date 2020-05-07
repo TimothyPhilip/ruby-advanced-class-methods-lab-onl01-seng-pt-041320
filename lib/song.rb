@@ -54,8 +54,11 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    new_from_filename(filename) && create
-    binding.pry
+    filename = filename.split(/\ - |\.mp3/)
+    c = self.new
+    c.save = filename
+    c
+    
   end
 
   def self.destroy_all
