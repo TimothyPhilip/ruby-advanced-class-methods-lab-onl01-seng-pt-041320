@@ -55,9 +55,10 @@ class Song
 
   def self.create_from_filename(filename)
     filename = filename.split(/\ - |\.mp3/)
-    c = self.new
+    c = self.create
+    c.name = filename[1]
+    c.artist_name = filename[0]
     c
-    
   end
 
   def self.destroy_all
