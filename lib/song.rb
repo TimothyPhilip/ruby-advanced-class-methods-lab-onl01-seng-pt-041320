@@ -53,7 +53,7 @@ class Song
     c
   end
 
-  def self.create_from_filename(filename)
+  def self.create_from_filename
     
   end
 
